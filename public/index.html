@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b0f3581c8e.js" crossorigin="anonymous"></script>
+    <title>Open Board project</title>
+</head>
+<body>
+    <div class="option-cont">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="tools-cont scale-tool">
+        <img class="pencil" src="pencil.jpg">
+        <img class="eraser"src="eraser.png">
+        <img class="download"src="download.png">
+        <img class="upload"src="gallery.png">
+        <img class="stickynotes"src="stickyNotes.jpg">
+        <img class="undo"src="undo.png">
+        <img class="redo"src="redo.jpg">
+    </div>
+    <div class="pencil-tool-cont">
+        <div class="pencil-width-cont">
+            <input type="range" min="2" max="10" value="3" class="pencil-Width">
+        </div>
+        <div class="pencil-color-cont">
+            <div class="black pencil-color"></div>
+            <div class="blue pencil-color"></div>
+            <div class="red pencil-color"></div>
+        </div>
+    </div>
+    <div class="erase-tool-cont">
+        <input type="range"min="2" max="10" value="3" class="eraser-Width">
+    </div>
+    <!-- <div class="sticky-cont">
+        <div class="header-cont">
+            <div class="minimise"></div>
+            <div class="remove"></div>
+        </div>
+        <div class="note-cont">
+            <textarea spellcheck="false"></textarea>
+        </div>
+    </div> -->
+    <canvas></canvas>
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+    <script>
+        let socket=io.connect("http://localhost:5000");
+    </script>
+    <script src="tools.js"></script>
+    <script src="canvas.js"></script>
+</body>
+</html>
